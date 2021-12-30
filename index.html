@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validaCPF</title>
+
+    <style>
+
+
+        .cabecalho{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(41, 110, 230, 0.802);
+
+            width: 95%;
+            padding: 5px ;
+            margin: auto auto;
+        }
+
+
+        .title_cabecalho{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            color:white;
+
+        }
+
+        .form{
+            margin-top: 15px;
+            margin: 15px auto 0px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            
+        }
+       
+        .wrapping{
+            margin-top: 5px;
+            display: flex;;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            
+            width: 100%;
+        }
+
+        #form_cpf{
+   
+            width: 80%;
+            height: 30px;
+
+            color: royalblue;
+            font-size: 15px;
+            font-family: cursive;
+
+            text-align: center;
+            border:none; 
+            box-shadow:2px 3px 5px rgba(30, 30, 30, 0.36);
+            outline-style: none;
+        }
+
+        #button_cpf{
+            margin-left: 10px;
+            height: 30px;
+
+            color: white;
+            font-size: 15px;
+            font-family:cursive;
+
+            
+            border: none;
+            
+            height: 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow:2px 3px 5px rgba(30, 30, 30, 0.36);
+        }
+        #button_cpf:hover{
+            border: 1.5px solid paleturquoise;
+            border-radius: 5px;
+            color: whitesmoke;
+        }
+        #form_cpf::placeholder{
+            color: rgba(128, 128, 128, 0.408);
+        }
+
+
+        /*Class Toogle*/
+
+        .orange{
+            background-color: rgba(240, 158, 6, 0.809);
+        }
+
+        .green{
+            background-color: rgb(15, 189, 42);
+        }
+
+        .red{
+            background-color: rgb(235, 42, 17);
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="cabecalho">
+        <h2 class="title_cabecalho">Valida CPF</h2>
+
+    </div>
+
+    <div class="form" inputmode="node">
+        
+        <label style="text-align: center;" > Insira o CPF com o fomrato XXX.XXX.XXX-XX </label>
+        
+        <div class="wrapping">
+            <input type="cpf" value="" name="cpf" id="form_cpf" minlength="10" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-10" autocomplete="none" >
+            <button id="button_cpf" class="red"> Validar </button>
+        </div>
+        
+    </div>
+    
+   
+    
+    
+</body>
+
+<script src="./validacpf.js"></script>
+
+
+</html>
